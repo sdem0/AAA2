@@ -1,0 +1,57 @@
+{
+  "fem": {
+    "m": 35.71,
+    "Ip": 8.64,
+    "d": -0.18288,
+    "EI": 9.77e6,
+    "GJ": 0.99e6,
+    "KBT": 0.0,
+    "zetaB": 0.0,
+    "zetaT": 0.0,
+    "l": 6.096,
+    "n_el": 50,
+    "bc": "CF"
+  },
+
+  "aero": {
+    "ay": [0, 1],
+    "c": [1.8288, 1.8288],
+    "ac": [0.33, 0.33],
+    "rho": 1.02
+  },
+
+  "dmo": {
+    "ay": [],
+    "m": [],
+    "d": [],
+    "I0": []
+  },
+
+  "_fem": {
+    "m": "beam mass per unit length, [kg/m]",
+    "Ip": "polar moment of inertia scaled with beam density per unit length (rho*Ip), [kgm**2/m]",
+    "d": "distance from cross-sectional CG to the elastic axis, positive when the CG is towards the LE wrt. the elastic axis, [m]",
+    "EI": "bending stiffness, [Nm**2]",
+    "GJ": "torsional stiffness, [Nm**2]",
+    "KBT": "bend-twist coupling coefficient (KBT**2 < EI*GJ), [Nm**2]",
+    "zetaB": "structural damping in bending, cB/cB_crit, [-]",
+    "zetaT": "structural damping in torsion, cT/cT_crit, [-]",
+    "l": "beam length, [m]",
+    "n_el": "number of beam elements, [-]",
+    "bc": "boundary condition, FF -> free-free, CF -> clamped-free"
+  },
+
+  "_aero": {
+    "ay": "[0, 1],  span-wise position of the strips as fraction of wing semi-span, [-]",
+    "c": "[0.0508, 0.0508], chord [m]",
+    "ac": "[0.50, 0.50],  # distance to the beam axis as a fraction of the chord measured from the LE, [-]",
+    "rho": "1.225,  # air density [kg/m**3]"
+  },
+
+  "_dmo": {
+    "ay": "[1], span-wise position of the discrete mass objects as fraction of wing semi-span, [-]",
+    "m": "[1.8288], mass of the discrete mass objects, [kg]",
+    "d": "[0.33], distance of the discrete mass objects to the elastic axis, positive when the mass is towards the LE wrt. the elastic axis, [m]",
+    "I0": "[1.02], moment of inertia the discrete mass objects (around it's own CG), [kgm**2]"
+  }
+}
